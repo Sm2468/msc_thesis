@@ -4,7 +4,7 @@
 Please see the 'clustering_experiment' code for all the information about this project. 
  
 # Problem Statement
-In this Jupyter Notebook, we will apply a K-Means Clustering algorithm on the output of a Classification and/or Regression algorithm. 
+In this Jupyter Notebook, we will apply a K-Means Clustering algorithm hierarchically on the output of a Classification and/or Regression algorithm. 
 We will start with a small "proof-of-concept", where we apply K-Means clustering on the test data generated from a Wine dataset.
 The purpose of this research is to investigate which errors occur disproportionately more in clusters comprising instances with demographic attributes, such as age, gender and income. This could indicate that the classification/regression algorithm underperforms for these groups, hereby indicating discriminating behaviour.
 
