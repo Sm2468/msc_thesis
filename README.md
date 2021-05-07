@@ -22,8 +22,8 @@ We apply a simple classification model on the data to obtain the classification 
 The generated results on the test set will serve as input for step 4. Thus, we export the generated results to a csv-file. 
 
 
-### 4: Bias-Aware Hierarchical K-Means 
-The Bias-Aware Hierarchical KMeans algorithm can now be applied on the classification results. 
+### 4: Bias-Aware Hierarchical K-Means (BAH-KM)
+First, all the features, except for the predictions, ground truth labels and the errors, are scaled. After scaling, the Bias-Aware Hierarchical KMeans algorithm can be applied on the classification results. 
 
 The input for the clustering algorithm has the following components:
 - The test data in a Pandas DataFrame: the instances with their features 
@@ -31,7 +31,7 @@ The input for the clustering algorithm has the following components:
 - The predicted class of the classifier per instance
 - The errors of the model per instance, which can be calculated from (truth label - predicted label) per instance
 
-Finally, we formulate a bias metric to calculate the bias per cluster and to identify the cluster(s) with the highest bias. 
+We formulate a bias metric to calculate the bias per cluster and to identify the cluster(s) with the highest bias. 
 The bias metric is the following:
 Bias of Cluster X = Performance Metric(Cluster X) - Performance Metric(all Clusters\Cluster X)
 
@@ -46,4 +46,8 @@ Several methods will be applied to identify the patterns in the biased clusters.
 -----
 
 Updates/open issues:
-- 
+- Filling in the EDA, Preprocessing, Classification and cluster analysis notebooks.
+- Errors in the F-score function: sometimes the Precision/Recall/F-score yield a "division by zero" error. 
+- Errors within the BAH-KM algorithm loop (see 4_bias_aware_clustering). It shows: "UserWarning: Boolean Series key will be reindexed to match DataFrame index." Also, it doesn't break out of the loop and return the biased cluster. It seems that it keeps calculating the bias on an empty dataframe. 
+- Weighted F-score instead of Macro F-score
+ - Cleaning up the code and renaming the variables to increase the readability 
