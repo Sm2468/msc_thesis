@@ -48,6 +48,6 @@ Several methods will be applied to identify the patterns in the biased clusters.
 Updates/open issues:
 - Filling in the EDA, Preprocessing, Classification and cluster analysis notebooks.
 - Errors in the F-score function: sometimes the Precision/Recall/F-score yield a "division by zero" error. 
-- Errors within the BAH-KM algorithm loop (see 4_bias_aware_clustering). It shows: "UserWarning: Boolean Series key will be reindexed to match DataFrame index." Also, it doesn't break out of the loop and return the biased cluster. It seems that it keeps calculating the bias on an empty dataframe. 
+- Errors within the BAH-KM algorithm loop (see 4_bias_aware_clustering). It shows: "UserWarning: Boolean Series key will be reindexed to match DataFrame index." Also, it doesn't break out of the loop and return the biased cluster. It seems that it keeps calculating the bias on an empty dataframe...
 - Weighted F-score instead of Macro F-score
  - Cleaning up the code and renaming the variables to increase the readability 
