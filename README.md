@@ -40,20 +40,20 @@ The output of the Bias-Aware algorithm is/are the cluster(s) with the highest bi
 
 ### 5. Identifying Patterns in Biased Clusters
 Several methods will be applied to identify the patterns in the biased clusters. We will inspect which features and which values of the features occurred most. 
-![plot test 1](./Images/Bias_Workflow.jpg)
-
-![General Workflow](C:\Users\Gebruiker\Documents\thesiscode\experimental\Images\Bias_Workflow.jpg)
-<!-- Format: ![Alt Text](url) -->
------
-<!-- C:\Users\Gebruiker\Documents\thesiscode\experimental\Images\Bias_Workflow.jpg -->
-
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
 Updates/open issues:
-- Filling in the EDA, Preprocessing, Classification and cluster analysis notebooks.
-- Errors in the F-score function: sometimes the Precision/Recall/F-score yield a "division by zero" error. 
-- Errors within the BAH-KM algorithm loop (see 4_bias_aware_clustering). It shows: "UserWarning: Boolean Series key will be reindexed to match DataFrame index." Also, it doesn't break out of the loop and return the biased cluster. It seems that it keeps calculating the bias on an empty dataframe...
-- Weighted F-score instead of Macro F-score
- - Cleaning up the code and renaming the variables to increase the readability 
- - Including the errors when clustering (currently, I've kept them separate but I will add them once all the code in 4_bias_aware_clustering works.)
+- [x] Filling in the EDA
+- [ ] Finish Preprocessing notebook
+- [x] Finish Classification notebook
+- [ ] Finish Cluster analysis notebook
+- [ ] Finish Biased Cluster identification notebook
+- [x] Errors in the F-score function: sometimes the Precision/Recall/F-score yield a "division by zero" error. 
+- [ ] Errors within the BAH-KM algorithm loop. It seems that it keeps calculating the bias on an empty dataframe...
+- [ ] Replacing the Macro F-score with  Weighted F-score 
+- [ ] Cleaning up the code and renaming the variables to increase the readability 
+- [ ] Including the errors when clustering (currently, I've kept them separate but I will add them once all the code in 4_bias_aware_clustering notebooks works.)
+
+ -----
+
+ ![plot test 1](./Images/Bias_Workflow.jpg)
