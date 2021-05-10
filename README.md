@@ -43,7 +43,7 @@ Several methods will be applied to identify the patterns in the biased clusters.
 
 
 Updates/open issues:
-- [x] Filling in the EDA
+- [x] Finish the EDA notebook
 - [ ] Finish Preprocessing notebook
 - [x] Finish Classification notebook
 - [ ] Finish Cluster analysis notebook
