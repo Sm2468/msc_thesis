@@ -1,20 +1,18 @@
 # General Approach and Current Progress
 
 
-Please see the 'clustering_experiment' code for all the information about this project. 
- 
 # Problem Statement
-In this Jupyter Notebook, we will apply a K-Means Clustering algorithm hierarchically on the output of a Classification algorithm.
-We will start with a small "proof-of-concept", where we apply K-Means clustering on the test data generated from a Wine dataset.
-The purpose of this research is to investigate which errors occur disproportionately more in clusters comprising instances with demographic attributes, such as age, gender and income. This could indicate that the classification/regression algorithm underperforms for these groups, hereby indicating discriminating behaviour.
+In this Jupyter Notebook, we will apply a K-Means Clustering algorithm hierarchically on the output of a classification algorithm to identify clusters with a high bias. The purpose of this research is to investigate which errors occur disproportionately more in clusters comprising instances with demographic attributes, such as age, gender and income. This could indicate that the classification algorithm underperforms for these groups, hereby indicating discriminating behaviour.
 
 Furthermore, this study is inspired by the following paper: https://bit.ly/3g2pAmT (the Bias-Aware Hierarchical K-Means Clustering algorithm). 
 
+We will start with a small "proof-of-concept", where we apply K-Means clustering on the test data generated from a Wine dataset.
+
 ### 1. Exploratory Data Analysis (EDA)
-We begin by exploring the raw dataset that will be fed to the classification algorithm at the third step. The dataset distribution is investigated as well as visually inspected. 
+We begin by exploring the raw dataset which will be first fed to a classifier (which takes place at the third step) and then to the clustering algorithm (fourth step). The dataset distribution is investigated as well as visually inspected. 
 
 ### 2. Preprocessing 
-Then, we preprocess the dataset by handling missing values and transforming categorical features into numerical values, possibly through one hot encoding.
+Then, we preprocess the dataset by handling missing values and transforming categorical features into numerical values. One of the options we investigate is one-hot encoding the categorical features.
 
 
 ### 3: Applying the Classification Algorithm  
@@ -42,8 +40,15 @@ The output of the Bias-Aware algorithm is/are the cluster(s) with the highest bi
 
 ### 5. Identifying Patterns in Biased Clusters
 Several methods will be applied to identify the patterns in the biased clusters. We will inspect which features and which values of the features occurred most. 
+![plot test 1](./Images/Bias_Workflow.jpg)
 
+![General Workflow](C:\Users\Gebruiker\Documents\thesiscode\experimental\Images\Bias_Workflow.jpg)
+<!-- Format: ![Alt Text](url) -->
 -----
+<!-- C:\Users\Gebruiker\Documents\thesiscode\experimental\Images\Bias_Workflow.jpg -->
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 
 Updates/open issues:
 - Filling in the EDA, Preprocessing, Classification and cluster analysis notebooks.
@@ -51,3 +56,4 @@ Updates/open issues:
 - Errors within the BAH-KM algorithm loop (see 4_bias_aware_clustering). It shows: "UserWarning: Boolean Series key will be reindexed to match DataFrame index." Also, it doesn't break out of the loop and return the biased cluster. It seems that it keeps calculating the bias on an empty dataframe...
 - Weighted F-score instead of Macro F-score
  - Cleaning up the code and renaming the variables to increase the readability 
+ - Including the errors when clustering (currently, I've kept them separate but I will add them once all the code in 4_bias_aware_clustering works.)
