@@ -19,7 +19,6 @@ Then, we preprocess the dataset by handling missing values and transforming cate
 We apply a simple classification model on the data to obtain the classification errors. Here, we use the RandomForestClassifier algorithm from SciKit. Then, we add the errors as a new feature to the dataset.
 The generated results on the test set will serve as input for step 4. Thus, we export the generated results to a csv-file. 
 
-
 ### 4: Bias-Aware Hierarchical K-Means (BAH-KM)
 First, all the features, except for the predictions, ground truth labels and the errors, are scaled. After scaling, the Bias-Aware Hierarchical KMeans algorithm can be applied on the classification results. 
 
