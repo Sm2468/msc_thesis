@@ -2,9 +2,14 @@
 # Requires with predicted and true class columns, but the errors column is not needed)
 # TODO solve the "float division by zero" error
 # TODO replace macro F-score by weighted F-score
+
+
+# Import packages
 import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
+
+# Performance Metrics
 def F_score(results, class_number):
     true_pos  = results.loc[(results["true_class"] == class_number) & (results["predicted_class"] == class_number)]
     true_neg  = results.loc[(results["true_class"] != class_number) & (results["predicted_class"] != class_number)]
@@ -87,10 +92,39 @@ def get_highest_var_cluster(data):
 # plotting the cluster assignments to check whether the clusters make sense
 # TODO convert clustering dimensions to PCA to plot on 2-dimensional axis 
 def plot_clusters(data):
-#     pca = PCA(n_components=2)
+    #     pca = PCA(n_components=2)
 #     transformed = pd.DataFrame({"axis1": np.zeros(len(data)), "axis2" : np.zeros(len(data))})
 #     transformed["axis1","axis2"] = pca.fit_transform(data.drop("clusters", axis=1), y=None)
 #     transformed["clusters"] = data["clusters"]
-    scatterplot = sns.scatterplot(data=data, x="Job", y="Age", hue="clusters")
-    plt.show()
     
+    scatterplot = sns.scatterplot(data=data, x="alcohol", y="ash", hue="clusters", size='errors', sizes=(100, 20), palette="tab10")
+    plt.show()
+
+
+def accuracy(results):
+    correct = results.loc[results['errors'] == 0]
+    # print('Correct:', len(correct), ' -  Total:', len(results))
+    acc = len(correct)/len(results)
+    # print('Accuracy:', acc)
+    return acc
+
+def bias_acc(data, cluster_id, cluster_col):
+    cluster_x = data.loc[data[cluster_col] == cluster_id]
+    remaining_clusters = data.loc[data[cluster_col] != cluster_id]
+    return accuracy(remaining_clusters) - accuracy(cluster_x)
+
+def get_next_cluster(data):
+    n_cluster = max(data['clusters'])
+    highest_variance = -1
+    cluster_number = 0
+
+    for i in range(0, n_cluster):
+        cluster_i = data.loc[data['clusters'] == i]
+        variance_cluster = np.var(cluster_i['errors'])
+        
+        if variance_cluster > highest_variance:
+            highest_variance = variance_cluster
+            cluster_number = i
+            print('--> Cluster with the highest variance:', cluster_number)
+
+    return cluster_number
