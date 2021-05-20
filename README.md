@@ -51,7 +51,7 @@ Updates/open issues:
 - [x] Errors in the F-score function: sometimes the Precision/Recall/F-score yield a "division by zero" error. 
 - [ ] Errors within the BAH-KM algorithm loop. It seems that it keeps calculating the bias on an empty dataframe...
 - [ ] Replacing the Macro F-score with  Weighted F-score 
-- [ ] Cleaning up the code and renaming the variables to increase the readability 
+- [x] Cleaning up the code and renaming the variables to increase the readability 
 - [ ] Including the errors when clustering (currently, I've kept them separate but I will add them once all the code in 4_bias_aware_clustering notebooks works.)
 
  -----
