@@ -42,17 +42,26 @@ Several methods will be applied to identify the patterns in the biased clusters.
 
 
 Updates/open issues:
-- [x] Finish the EDA notebook
-- [ ] Finish Preprocessing notebook
-- [x] Finish Classification notebook
-- [ ] Finish Cluster analysis notebook
-- [ ] Finish Biased Cluster identification notebook
-- [x] Errors in the F-score function: sometimes the Precision/Recall/F-score yield a "division by zero" error. 
-- [ ] Errors within the BAH-KM algorithm loop. It seems that it keeps calculating the bias on an empty dataframe...
-- [ ] Replacing the Macro F-score with  Weighted F-score 
-- [x] Cleaning up the code and renaming the variables to increase the readability 
-- [ ] Including the errors when clustering (currently, I've kept them separate but I will add them once all the code in 4_bias_aware_clustering notebooks works.)
 
+- [ ] Finish Preprocessing notebook
+- [ ] Finish Cluster analysis notebook
+- [ ] Including the errors when clustering (currently, I've kept them separate but I will add them once all the code in 4_bias_aware_clustering notebooks works.)
+- [ ] Replacing the Macro F-score with  Weighted F-score 
+- [x] Errors in the F-score function: sometimes the Precision/Recall/F-score yield a "division by zero" error. 
+- [x] Errors within the BAH-KM algorithm loop. It seems that it keeps calculating the bias on an empty dataframe...
+- [x] Cleaning up the code and renaming the variables to increase the readability 
+- [x] Finish the EDA notebook
+- [x] Finish Classification notebook
+------
+TODO:
+- [ ] Analyse the centroids of the clusters with a high bias
+- [ ] Create parallel-coordinate plots for the clusters with a high bias. Each datapoint is the centroid of a cluster. We order all the datapoints on magnitude of bias. (advantage: applicable for multiclass & represents the importance of features & shows the patterns of the biased clusters) --> requires scaled features
+- [ ] (Redundant when having coordinate plots) Radar plots
+- [ ] Error metrics: variance of the True Positive Rate (better than mean absolute deviation)
+- [ ] Baseline with 
+* only KMeans without errors
+* only KMeans with errors
+- [ ] Compare meaningfulness of clusters: comparing experimental conditions with baseline 
  -----
 
  ![plot test 1](./Images/Bias_Workflow.jpg)
