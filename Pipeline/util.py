@@ -104,7 +104,9 @@ def plot_clusters(data):
 def accuracy(results):
     correct = results.loc[results['errors'] == 0]
     # print('Correct:', len(correct), ' -  Total:', len(results))
+    print('correct')
     acc = len(correct)/len(results)
+    
     # print('Accuracy:', acc)
     return acc
 
