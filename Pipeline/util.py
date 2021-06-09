@@ -130,3 +130,5 @@ def get_next_cluster(data):
             print('--> Cluster with the highest variance:', cluster_number)
 
     return cluster_number
+
+
