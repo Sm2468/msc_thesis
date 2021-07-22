@@ -1,4 +1,4 @@
-,alcohol,malic_acid,ash,alcalinity_of_ash,magnesium,total_phenols,flavanoids,nonflavanoid_phenols,proanthocyanins,color_intensity,hue,od280/od315_of_diluted_wines,proline,predicted_class,true_class,errors
+,alcohol,malic_acid,ash,alcalinity_of_ash,magnesium,total_phenols,flavanoids,nonflavanoid_phenols,proanthocyanins,color_intensity,hue,od280/od315,proline,predicted_class,true_class,errors
 104,12.51,1.73,1.98,20.5,85.0,2.2,1.92,0.32,1.48,2.94,1.04,3.57,672.0,1,1,0
 67,12.37,1.17,1.92,19.6,78.0,2.11,2.0,0.27,1.04,4.68,1.12,3.48,510.0,1,1,0
 118,12.77,3.43,1.98,16.0,80.0,1.63,1.25,0.43,0.83,3.4,0.7,2.12,372.0,2,1,1
