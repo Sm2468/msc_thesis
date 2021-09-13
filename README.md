@@ -35,7 +35,7 @@ The bias metric is the following:
 Bias of Cluster X = Performance Metric(Cluster X) - Performance Metric(all Clusters\Cluster X)
 In our case, we used Accuracy, but many other performance metrics can be used as well. Essentially, any performance metric that uses the errors of the classifier can be used, such as Precision, Recall and F1-score. 
 
-![HBAC Pseudocode](./Images/HBAC_Pseudocode.jpg)
+![HBAC Pseudocode](./Images/HBAC_Pseudocode.png)
 
 ### 7. Analysing the biased clusters
 We used the following methods to investigate the instances in the clusters with the highest discrimination bias:
