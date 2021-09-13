@@ -1,7 +1,7 @@
 # Hierarchical Bias-Aware Clustering (HBAC)
 
 
-# Problem Statement
+## Problem Statement
 In this project, we will apply the HBAC algorithm on the output of a classification algorithm to identify clusters with a high discriminating or favouring bias. The purpose of this research is to investigate which errors occur disproportionately more for a single or multiple groups of persons when compared to other groups in the dataset. A high discriminating bias. This discriminating bias could indicate that the classification algorithm underperforms, and therefore discriminates against these groups. 
 
 ![HBAC Pipeline](./Images/Bias_Workflow.jpg)
@@ -31,7 +31,7 @@ We scale all the features including the error feature. This step requires attent
 We apply the HBAC algorithm on the dataset. We have three different clustering algorithms which can be used for HBAC: K-Means, MeanShift and DBSCAN. From our preliminary results, K-Means turned out to be the most effective clustering technique for HBAC, so we recommend using HBAC-KMeans. 
 
 We formulate a bias metric to calculate the bias per cluster and to identify the cluster(s) with the highest discrimination bias. 
-The bias metric is the following:
+The bias metric is the following: 
 Bias of Cluster X = Performance Metric(Cluster X) - Performance Metric(all Clusters\Cluster X)
 In our case, we used Accuracy, but many other performance metrics can be used as well. Essentially, any performance metric that uses the errors of the classifier can be used, such as Precision, Recall and F1-score. 
 
@@ -47,11 +47,11 @@ We used the following methods to investigate the instances in the clusters with 
 
 ## Additional Materials
 Articles and books:
-* My thesis on Auditing Algorithmic Fairness with Unsupervised Bias Discovery: https://bit.ly/3nsloAh
-* Blogpost on the HBAC algorithm: (Amsterdam Intelligence Blogpost link)
+* [My thesis on Auditing Algorithmic Fairness with Unsupervised Bias Discovery](https://drive.google.com/file/d/1O-zaLDryiO7uo4XTGqd7BifFCpkIGBEb/view "Auditing Algorithmic Fairness with Unsupervised Bias Discovery") 
+* [Blogpost on the HBAC algorithm](https://www.amsterdamintelligence.com/posts "Amsterdam Intelligence Blogpost")
 
-* The main inspiration behind this study: the Bias-Aware Hierarchical K-Means Clustering proposed by Misztal-Radecka and Indurkhya : https://bit.ly/3lcfiBq
-* Meta review on algorithmic fairness: https://www.researchgate.net/profile/Ninareh-Mehrabi/publication/335420210_A_Survey_on_Bias_and_Fairness_in_Machine_Learning/links/5dcafbf092851c818049e208/A-Survey-on-Bias-and-Fairness-in-Machine-Learning.pdf
+* The main inspiration behind this study: [the Bias-Aware Hierarchical K-Means Clustering proposed by Misztal-Radecka and Indurkhya](https://bit.ly/3lcfiBq "Bias-Aware Hierarchical K-Means Clustering")
+* [Meta review on algorithmic fairness](https://www.researchgate.net/profile/Ninareh-Mehrabi/publication/335420210_A_Survey_on_Bias_and_Fairness_in_Machine_Learning/links/5dcafbf092851c818049e208/A-Survey-on-Bias-and-Fairness-in-Machine-Learning.pdf "A Survey on Bias and Fairness in ML")
 * The Fair ML book: A comprehensive and insightful book on fairness by Fairness experts: https://fairmlbook.org/
 * Interesting chapter on Fairness: https://textbook.coleridgeinitiative.org/chap-bias.html
 
