@@ -39,27 +39,27 @@ In our case, we used Accuracy, but many other performance metrics can be used as
 
 ### 7. Analysing the biased clusters
 We used the following methods to investigate the instances in the clusters with the highest discrimination bias:
-* A statistical test ()
-* Parallel Coordinate plots
-* Density distribution plots
+* A statistical test to determine whether the difference in average feature values between the discriminated and remaining clusters was significant; 
+* Parallel Coordinate plots that show the contrast between the average features values of the discriminated and remaining clusters;
+* Density distribution plots which also show the differences in data distributions for each feature separately between the biased and remaining clusters. 
 
 --- 
 
-## Additional Materials
+## Additional Materials on Bias and Fairness
 Articles and books:
-* [My thesis on Auditing Algorithmic Fairness with Unsupervised Bias Discovery](https://drive.google.com/file/d/1O-zaLDryiO7uo4XTGqd7BifFCpkIGBEb/view "Auditing Algorithmic Fairness with Unsupervised Bias Discovery") 
-* [Blogpost on the HBAC algorithm](https://www.amsterdamintelligence.com/posts "Amsterdam Intelligence Blogpost")
-
+* My thesis: [Auditing Algorithmic Fairness with Unsupervised Bias Discovery](https://drive.google.com/file/d/1O-zaLDryiO7uo4XTGqd7BifFCpkIGBEb/view "Auditing Algorithmic Fairness with Unsupervised Bias Discovery") 
+* A Blogpost on the HBAC algorithm on [Amsterdam Intelligence](https://www.amsterdamintelligence.com/posts "Amsterdam Intelligence Blogpost")
 * The main inspiration behind this study: [the Bias-Aware Hierarchical K-Means Clustering proposed by Misztal-Radecka and Indurkhya](https://bit.ly/3lcfiBq "Bias-Aware Hierarchical K-Means Clustering")
 * [Meta review on algorithmic fairness](https://www.researchgate.net/profile/Ninareh-Mehrabi/publication/335420210_A_Survey_on_Bias_and_Fairness_in_Machine_Learning/links/5dcafbf092851c818049e208/A-Survey-on-Bias-and-Fairness-in-Machine-Learning.pdf "A Survey on Bias and Fairness in ML")
-* The Fair ML book: A comprehensive and insightful book on fairness by Fairness experts: https://fairmlbook.org/
-* Interesting chapter on Fairness: https://textbook.coleridgeinitiative.org/chap-bias.html
+* A comprehensive and insightful book on fairness by Fairness experts: [The Fair ML book](https://fairmlbook.org/ "Fair ML Book")
+* Interesting chapter on Fairness in [The Big Data and Social Science book](https://textbook.coleridgeinitiative.org/chap-bias.html "Fairness & Bias chapter") 
 
 Tools:
-* Google's What-If Tool: https://pair-code.github.io/what-if-tool/
-* IBM's open-source toolkit with methods to assess fairness: https://aif360.mybluemix.net/ 
+* Google's [What-If Tool](https://pair-code.github.io/what-if-tool/ "What-If Tool")
+* [IBM's](https://aif360.mybluemix.net/ "AI Fairness 360") open-source toolkit with methods to assess fairness;
+* Aequitas, [an open-source bias audit toolkit](http://aequitas.dssg.io/ "Aequitas")
 
 Tutorials:
-* Hands-on tutorials on Fairness: https://github.com/dssg/fairness_tutorial
-* An introduction on classification bias by dr Emma Beauxis-Aussalet and PyLadies: https://github.com/pyladiesams/classification-bias-beginner-apr2021
+* An extensive hands-on tutorials on [Fairness](https://dssg.github.io/fairness_tutorial/ "DSSG Tutorial") 
+* An introduction on [classification bias](https://github.com/pyladiesams/classification-bias-beginner-apr2021 "Classification Bias for Beginners") by dr. Emma Beauxis-Aussalet and PyLadies
  
